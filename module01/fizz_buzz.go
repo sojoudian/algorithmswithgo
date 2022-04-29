@@ -14,55 +14,49 @@ import "fmt"
 // it here to make life easier for beginners.
 func FizzBuzz(n int) {
 	//it started from 1
-	for i := 1; i < n; i++ {
-		if i%3 == 0 && i%5 == 0 {
+	for i := 1; i <= n; i++ {
+		switch {
+		case i%3 == 0 && i%5 == 0:
 			fmt.Print("Fizz Buzz")
-		} else if i%3 == 0 {
-			fmt.Print("Fizz, ")
-		} else if i%5 == 0 {
-			fmt.Print("Buzz, ")
-		} else {
-			fmt.Print(i, ", ")
+		case i%3 == 0:
+			fmt.Print("Fizz")
+		case i%5 == 0:
+			fmt.Print("Buzz")
+		default:
+			fmt.Print(i)
+		}
+		if i != n {
+			fmt.Print(", ")
 		}
 	}
-	if n%3 == 0 && n%5 == 0 {
-		fmt.Print("Fizz Buzz")
-	} else if n%3 == 0 {
-		fmt.Print("Fizz, ")
-	} else if n%5 == 0 {
-		fmt.Print("Buzz")
-	} else {
-		fmt.Print(n)
-	}
-
 	fmt.Println()
 }
 
-func FizzBuzz(n int) {
-	//it started from 1
-	for i := 1; i < n; i++ {
-		if i%3 == 0 && i%5 == 0 {
-			fmt.Print("Fizz Buzz")
-		} else if i%3 == 0 {
-			fmt.Print("Fizz, ")
-		} else if i%5 == 0 {
-			fmt.Print("Buzz, ")
-		} else {
-			fmt.Print(i, ", ")
-		}
-	}
-	if n%3 == 0 && n%5 == 0 {
-		fmt.Print("Fizz Buzz")
-	} else if n%3 == 0 {
-		fmt.Print("Fizz, ")
-	} else if n%5 == 0 {
-		fmt.Print("Buzz")
-	} else {
-		fmt.Print(n)
-	}
-
-	fmt.Println()
-}
+//func FizzBuzz(n int) {
+//	//it started from 1
+//	for i := 1; i < n; i++ {
+//		if i%3 == 0 && i%5 == 0 {
+//			fmt.Print("Fizz Buzz")
+//		} else if i%3 == 0 {
+//			fmt.Print("Fizz, ")
+//		} else if i%5 == 0 {
+//			fmt.Print("Buzz, ")
+//		} else {
+//			fmt.Print(i, ", ")
+//		}
+//	}
+//	if n%3 == 0 && n%5 == 0 {
+//		fmt.Print("Fizz Buzz")
+//	} else if n%3 == 0 {
+//		fmt.Print("Fizz, ")
+//	} else if n%5 == 0 {
+//		fmt.Print("Buzz")
+//	} else {
+//		fmt.Print(n)
+//	}
+//
+//	fmt.Println()
+//}
 
 //func FizzBuzz(n int) {
 //	//it started from 1
